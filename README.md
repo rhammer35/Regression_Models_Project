@@ -8,7 +8,7 @@ You work for Motor Trend, a magazine about the automobile industry. Looking at a
 * “Is an automatic or manual transmission better for MPG”
 * "Quantify the MPG difference between automatic and manual transmissions"
 
-__**Question**__
+_**Question**_
 
 Take the mtcars data set and write up an analysis to answer their question using regression models and exploratory data analyses.
 
@@ -24,7 +24,7 @@ Your report must be:
 * Each criteria is binary: (1 point = criteria met acceptably; 0 points = criteria not met acceptably)
 * Your Course Project score will be the sum of the points and will count as 40% of your final grade in the course.
 
-__**Criteria**__
+_**Criteria**_
 
 1. Did the student interpret the coefficients correctly?
 2. Did the student do some exploratory data analyses?
