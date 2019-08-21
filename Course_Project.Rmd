@@ -5,14 +5,20 @@ output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE, results = "hold")
 ```
 
-## R Markdown
+## Executive Summary
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+The purpose of this analysis was to determine whether the type of transmission in an automobile (automatic or manual) has a measurable effect on gas mileage. The data used came from the **mtcars** data set in R, which was extracted from a 1974 issue of _Motor Trend_ magazine and contained data on 32 automobiles. There were 11 different variables included in the data; the focus in the analysis was on the following variables: mpg (Miles/US gallon) and am (transmission type, where 0 = automatic and 1 = manual); however other variables were considered as possible confounders, including: cyl (number of engine cylinders), hp (gross horsepower), (wt, in 1000 lbs), and vs (engine shape where 0 = V-shaped and 1 = straight).
+The analysis revealed
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## Introduction to Data
+
+
+
+
+It usually contains a brief statement of the problem or proposal covered in the major document(s), background information, concise analysis and main conclusions. It is intended as an aid to decision-making by managers 
 
 ```{r cars}
 summary(cars)
