@@ -7,24 +7,42 @@ output: pdf_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, results = "hold")
 ```
+```{r loading data and packages, results='hide'}
+data(mtcars)
+library(ggplot2)
+library(tidyverse)
+library(knitr)
+```
 
 ## Executive Summary
 
 The purpose of this analysis was to determine whether the type of transmission in an automobile (automatic or manual) has a measurable effect on gas mileage. The data used came from the **mtcars** data set in R, which was extracted from a 1974 issue of _Motor Trend_ magazine and contained data on 32 automobiles. There were 11 different variables included in the data; the focus in the analysis was on the following variables: mpg (Miles/US gallon) and am (transmission type, where 0 = automatic and 1 = manual); however other variables were considered as possible confounders, including: cyl (number of engine cylinders), hp (gross horsepower), (wt, in 1000 lbs), and vs (engine shape where 0 = V-shaped and 1 = straight).
 The analysis revealed
 
-## Introduction to Data
-
-
-
-
 It usually contains a brief statement of the problem or proposal covered in the major document(s), background information, concise analysis and main conclusions. It is intended as an aid to decision-making by managers 
 
-```{r cars}
-summary(cars)
+## Introduction to Data
+
+The data set used in this analysis was the **mtcars** data that comes built in to R. It was compiled in 1974 for an issue of _Motor Trend_ magazine and, per the R Documentation, "comprises fuel consumption and 10 aspects of automobile design and performance for 32 autombiles" from model years 1973-1974. The 11 variables are as follows:  
+[, 1]	mpg	(Miles/US gallon)  
+[, 2]	cyl	(Number of cylinders)  
+[, 3]	disp (Engine displacement in cubic inches)  
+[, 4]	hp (Gross horsepower)  
+[, 5]	drat (Rear axle ratio)  
+[, 6]	wt (Weight in 1000 lbs)  
+[, 7]	qsec (1/4 mile time)  
+[, 8]	vs (Engine (0 = V-shaped, 1 = straight))  
+[, 9]	am (Transmission, where 0 = automatic, 1 = manual)  
+[,10]	gear (Number of forward gears)  
+[,11]	carb (Number of carburetors)  
+
+Use of R's str() function revealed that all of the variables in the table were classified as numeric. The code below created a data table for analysis using the source data as a starting point and then converted the transmission, engine shape, cylinder, gear, and carburetor variables to factor variables, because each was a discrete variable with a small, finite number of values. This was the only pre-processing of the data prior to plotting and regression analysis.
+```{r initial data table manipulation, echo=TRUE, results='hide'}
+mtcars1 <- tbl_df(mtcars)
+mtcars1 <- mutate(mtcars1, am = factor(am), vs = factor(vs), cyl = factor(cyl), gear = factor(gear), carb = factor(carb))
 ```
 
-## Including Plots
+## Exploratory Analysis
 
 You can also embed plots, for example:
 
